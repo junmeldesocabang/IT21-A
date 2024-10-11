@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+</head>
+<body>
+    <h1>Student Information</h1>
+    <button id="showDetails">Show Student Details</button>
+    <div id="output"></div>
+
+    <script>
+        class Person {
+            constructor(name) {
+                this.name = name;
+            }
+            sayName() {
+                console.log(this.name);
+            }
+        }
+
+        class Student extends Person {
+            constructor(name, rollNumber) {
+                super(name);
+                this.rollNumber = rollNumber;
+            }
+            logDetails() {
+                return `Name: ${this.name}, Roll Number: ${this.rollNumber}`;
+            }
+            sayName() {
+                console.log("From Student");
+                super.sayName();
+            }
+        }
+
+        var student = new Student("Junmeldeso", 9);
+
+        document.getElementById("showDetails").addEventListener("click", function() {
+            const details = student.logDetails();
+            const nameFromStudent = student.sayName(); 
+            document.getElementById("output").innerHTML = details;
+        });
+    </script>
+</body>
+</html>
+
