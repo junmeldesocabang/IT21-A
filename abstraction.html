@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Details</title>
+</head>
+<body>
+
+    <h1>Employee Details</h1>
+    <input type="text" id="name" placeholder="Name">
+    <input type="number" id="salary" placeholder="Base Salary">
+    <button id="submit">Submit</button>
+    <p id="info"></p>
+
+    <script>
+        class Employee {
+            #name; #baseSalary;
+            setName(val) { this.#name = val; }
+            setBaseSalary(val) { this.#baseSalary = val; }
+            getName() { return this.#name; }
+            getSalary() { return this.#baseSalary + 1000; }
+        }
+
+        document.getElementById('submit').onclick = () => {
+            const emp = new Employee();
+            emp.setName(document.getElementById('name').value);
+            emp.setBaseSalary(+document.getElementById('salary').value);
+            document.getElementById('info').innerText = `Name: ${emp.getName()}, Total Salary: ${emp.getSalary()}`;
+        };
+    </script>
+
+</body>
+</html>
