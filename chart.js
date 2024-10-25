@@ -32,10 +32,10 @@ const config = {
                 title: {
                     display: true,
                     text: 'Days',
-                    color: '#234',
+                    color: '#1',
                     font: {
                         family: 'Comic Sans MS',
-                        size: 20,
+                        size: 30,
                         weight: 'bold',
                         lineHeight: 1.2,
                     },
@@ -47,10 +47,10 @@ const config = {
                 title: {
                     display: true,
                     text: 'Value',
-                    color: '#191',
+                    color: '#151',
                     font: {
                         family: 'Times',
-                        size: 20,
+                        size: 30,
                         style: 'normal',
                         lineHeight: 1.2
                     },
